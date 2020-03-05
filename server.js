@@ -54,10 +54,8 @@ app.post("/imageurl", (req, res) => {
   image.handleApiCall(req, res);
 });
 
-const PORT = process.env.PORT;
-
-app.listen(PORT, () => {
-  console.log(`online on ${PORT}`);
+app.listen(process.env.PORT || 3001, () => {
+  console.log(`online on ${process.env.PORT}`);
 });
 
 /*
